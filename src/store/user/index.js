@@ -3,8 +3,10 @@ import addUserAction from "./actions";
 import addUser from "./mutations";
 const users = {
   namespaced: true,
-  state: {
-    users: ["zayarmyooo@gmail.com"]
+  state() {
+    return {
+      users: ["zayarmyooo@gmail.com"]
+    }
   },
   mutations: addUser,
   actions: addUserAction,
